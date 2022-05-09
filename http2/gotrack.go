@@ -67,6 +67,10 @@ func curGoroutineID() uint64 {
 	return n
 }
 
+func CurGoroutineID() uint64 {
+	return curGoroutineID()
+}
+
 var littleBuf = sync.Pool{
 	New: func() interface{} {
 		buf := make([]byte, 64)
